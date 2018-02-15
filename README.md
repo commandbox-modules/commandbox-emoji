@@ -7,7 +7,7 @@ To install `commandbox-emoji`, you need [CommandBox](https://www.ortussolutions.
 
 Once you have that set-up, just run `box install commandbox-emoji` in your shell and :boom:
 
-You're now ready to use emoji in your node projects! Awesome! :rocket:
+You're now ready to use emoji in your CFML projects! Awesome! :rocket:
 
 ## Usage
 
