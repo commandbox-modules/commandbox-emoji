@@ -1,0 +1,34 @@
+{
+    "name":"CommandBox Emoji",
+    "version":"1.0.0",
+    "author":"Ortus Solutions, Corp",
+    "homepage":"https://www.ortussolutions.com",
+    "location":"commandbox-modules/commandbox-emoji#v1.0.0",
+    "documentation":"https://github.com/commandbox-modules/commandbox-emoji",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/commandbox-modules/commandbox-emoji"
+    },
+    "bugs":"https://github.com/commandbox-modules/commandbox-emoji/issues",
+    "shortDescription":"CommandBox command and library for providing emoji's at the CLI level",
+    "slug":"commandbox-emoji",
+    "type":"commandbox-modules",
+    "keywords":"emoji, emoji, and more emoji",
+    "license":[
+        {
+            "type":"Apache2",
+            "url":"http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "contributors":[
+    ],
+    "dependencies":{
+    },
+    "installPaths":{
+    },
+    "scripts":{
+        "postVersion":"package set location='commandbox-modules/commandbox-emoji#v`package version`'",
+        "onRelease":"publish",
+        "postPublish":"!git push --follow-tags"
+    }
+}
