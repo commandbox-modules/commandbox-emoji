@@ -79,8 +79,28 @@ component singleton{
 	 * @nameOrCode The key name or the :code: name
 	 */
 	function hasEmoji( required nameOrCode ){
-		arguments.nameOrCode = stripColons( arguments.nameOrCode );
-		return variables.emojiMap.keyExists( arguments.nameOrCode );
+		return hasEmojiByName( arguments.nameOrCode) || hasEmojiByCode( arguments.nameOrCode );
+	}
+
+	/**
+	 * Check if you have an emoji by key or :key:
+	 * @name The name
+	 */
+	function hasEmojiByName( required name ){
+		arguments.name = stripColons( arguments.name );
+		return variables.emojiMap.keyExists( arguments.name );
+	}
+
+	/**
+	 * Check if you have an emoji by code
+	 * @code The code
+	 */
+	function hasEmojiByCode( required code ){
+		var results = variables.emojiMap
+			.filter( function( key, value ){
+				return ( value == stripNSB( code ) );
+			} );
+		return ( ! results.isEmpty() );
 	}
 
 	/**
@@ -109,6 +129,20 @@ component singleton{
 			} );
 
 		return results;
+	}
+
+	/**
+	 * Unemojify a string
+	 * @target The string to unemojify
+	 */
+	function unemojify( required target ){
+		return arguments.target
+			.listToArray( " " )
+			.map( function( word ){
+				var key = which( word, true );
+				return ( key.len() ? key : word );
+			} )
+			.toList( " " );
 	}
 
 	/**

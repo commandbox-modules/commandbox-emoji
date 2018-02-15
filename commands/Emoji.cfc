@@ -2,16 +2,12 @@ component{
 
     property name="emojiService" inject="emojiService@commandbox-emoji";
 
-    function run(
-    ){
-
-    	print.redLine( emojiService.search( "he" ) );
-
-        print.greenLine( emojiService.emojify( "I :heart: you :heart: with :coffee: with :invalid:" ) );
-
-        print.blueLine( emojiService.which( '💯' ) );
-
-        print.greenLine( emojiService.random().toString() );
+    /**
+     * Get an emoji by name or github flavored markdown emoji: http://www.emoji-cheat-sheet.com/)
+     * @name The name or markdown, ex: coffee or :coffee:
+     */
+    function run( required name ){
+    	print.text( emojiService.get( arguments.name ) );
     }
 
 }
