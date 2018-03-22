@@ -1,6 +1,6 @@
 component{
 
-    property name="emojiService" inject="emojiService@commandbox-emoji";
+    property name="emojiService" inject="emojiService@cbemoji";
 
     /**
      * Get an emoji by name or github flavored markdown emoji: http://www.emoji-cheat-sheet.com/)

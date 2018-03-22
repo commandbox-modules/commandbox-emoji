@@ -20,6 +20,7 @@ The following are the commands registered for you:
 * `emoji` - Pass in a name for the emoji to render: `emoji heart`, `emoji :heart:`
 * `emojify` - Pass in a string with github flavored emoji markdown to translate it: `I :heart: my :coffee:!`
 * `unemojify` - Convert an emoji enabled string to github flavored emoji markdown: `I ❤️  you`
+* `emojimap` - Prints out all the emoji's supported in this library.
 
 ### Emoji Service
 

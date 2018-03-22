@@ -20,11 +20,12 @@
             "url":"http://www.apache.org/licenses/LICENSE-2.0"
         }
     ],
-    "contributors":[
-    ],
+    "contributors":[],
     "dependencies":{
+        "cbemoji":"^1.0.0"
     },
     "installPaths":{
+        "cbemoji":"modules/cbemoji"
     },
     "scripts":{
         "postVersion":"package set location='commandbox-modules/commandbox-emoji#v`package version`'",
